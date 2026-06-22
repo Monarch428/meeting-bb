@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 const fakeRegistrants = [
   { fullName: "James",   time: "2 days ago" },
   { fullName: "Mike ",   time: "5 days ago" },
@@ -51,7 +53,7 @@ export default function RegistrationPopup() {
   useEffect(() => {
     const fetchReal = async () => {
       try {
-        const res  = await fetch("http://localhost:5000/api/register");
+        const res  = await fetch(`${API_BASE_URL}/api/register`);
         const data = await res.json();
 
         const real = (data.data || []).map((r) => ({
