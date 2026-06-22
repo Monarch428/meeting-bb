@@ -113,7 +113,6 @@ export default function RegisterSection() {
                 lineHeight: 1.6,
               }}
             >
-              <strong style={{ color: "#1a1a1a" }}>You’re registered!</strong>
               <br />
               We’ll send all the event details to your inbox shortly. Please
               check both your inbox and spam folder to make sure you don’t miss

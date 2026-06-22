@@ -49,7 +49,7 @@ const sendZoomLink = async (registrant) => {
   await transporter.sendMail({
     from: `"HVAC AI Session" <${process.env.SMTP_USER}>`,
     to: registrant.email,
-    subject: "You're registered! Here's your Zoom link for July 15th",
+    subject: "You're Successfully Registered for the Exclusive AI event for BNI HVAC members",
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.6;">
   
