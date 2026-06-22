@@ -69,6 +69,7 @@ export default function Footer() {
           .footer-container {
             flex-direction: column;
             gap: 16px;
+            align-items: flex-start;
           }
           .footer-right {
             flex-direction: column;

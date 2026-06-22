@@ -7,7 +7,7 @@ export default function InvisibleSection() {
           width: 100%;
           display: flex;
           justify-content: center;
-          padding:0px 40px;
+          padding: 0 24px;
           font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
           box-sizing: border-box;
         }
@@ -69,6 +69,25 @@ export default function InvisibleSection() {
           color: #e03030;
           margin: 0;
           margin-bottom: 100px;
+        }
+
+        @media (max-width: 768px) {
+          .invisible-wrapper {
+            padding: 0 16px;
+          }
+
+          .invisible-subtext,
+          .invisible-bold {
+            font-size: 17px;
+          }
+
+          .invisible-bold {
+            margin-bottom: 56px;
+          }
+
+          .section-divider {
+            margin-top: 56px;
+          }
         }
       `}</style>
 

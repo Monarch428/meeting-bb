@@ -156,8 +156,25 @@ export default function ForYouSection() {
 
         /* Responsive */
         @media (max-width: 768px) {
+          .foryou-wrapper {
+            padding: 64px 16px;
+          }
+
+          .foryou-sub {
+            font-size: 17px;
+            margin-top: 12px;
+          }
+
           .foryou-cards {
             flex-direction: column;
+          }
+
+          .foryou-card {
+            padding: 22px 18px;
+          }
+
+          .card-list-item {
+            font-size: 16px;
           }
         }
       `}</style>

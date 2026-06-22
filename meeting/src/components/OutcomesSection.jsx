@@ -159,6 +159,30 @@ export default function OutcomesSection() {
           margin-bottom: 0px;
           margin: 0;
         }
+
+        @media (max-width: 768px) {
+          .outcomes-wrapper {
+            padding: 64px 16px;
+          }
+
+          .outcomes-headline {
+            margin-bottom: 20px;
+          }
+
+          .outcome-item {
+            align-items: flex-start;
+            padding: 16px;
+          }
+
+          .outcomes-summary {
+            padding: 18px 16px;
+          }
+
+          .outcomes-summary p {
+            font-size: 16px;
+            line-height: 1.5;
+          }
+        }
       `}</style>
 
       <section className="outcomes-wrapper">

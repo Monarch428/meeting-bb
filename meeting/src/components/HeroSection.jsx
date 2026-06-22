@@ -282,6 +282,7 @@ export default function HeroSection() {
           max-width: 1100px;
           display: flex;
           align-items: center;
+          justify-content: center;
           gap: 48px;
           padding: 20px 0;
           flex-wrap: wrap;
@@ -319,21 +320,123 @@ export default function HeroSection() {
           color: #e03030;
         }
 
+        @media (max-width: 960px) {
+          .hero-wrapper {
+            padding: 72px 20px 0;
+          }
+
+          .hero-container {
+            gap: 36px;
+            padding-bottom: 40px;
+          }
+
+          .hero-headline {
+            margin-bottom: 28px;
+          }
+
+          .browser-content {
+            padding: 22px;
+          }
+
+          .info-bar {
+            gap: 16px 24px;
+            padding: 18px 20px;
+          }
+
+          .info-item {
+            width: calc(50% - 12px);
+            min-width: 0;
+            white-space: normal;
+          }
+        }
+
         /* ── Responsive ── */
         @media (max-width: 768px) {
+          .hero-wrapper {
+            padding: 56px 16px 0;
+          }
+
           .hero-container {
             flex-direction: column;
-            gap: 40px;
+            gap: 32px;
+            padding-bottom: 32px;
           }
+
+          .hero-left {
+            align-items: center;
+            text-align: center;
+          }
+
           .hero-right {
             width: 100%;
           }
-          .info-bar {
-            gap: 20px;
-            padding: 20px 24px;
+
+          .hero-badge,
+          .hero-headline,
+          .hero-subtext {
+            text-align: center;
           }
+
+          .hero-badge {
+            margin-bottom: 20px;
+          }
+
+          .hero-subtext {
+            font-size: 16px;
+            margin-bottom: 28px;
+          }
+
+          .browser-bar {
+            padding: 10px 12px;
+          }
+
+          .address-bar {
+            padding: 5px 10px;
+            font-size: 11px;
+          }
+
+          .browser-content {
+            padding: 18px 16px;
+          }
+
+          .query-box,
+          .response-box {
+            padding-left: 14px;
+            padding-right: 14px;
+          }
+
+          .info-bar {
+            gap: 12px;
+            padding: 16px;
+          }
+
+          .info-item {
+            width: 100%;
+            justify-content: flex-start;
+            font-size: 14px;
+          }
+
+          .info-label,
+          .info-value {
+            font-size: 16px;
+          }
+
           .hero-cta-banner-wrap {
             max-width: 100%;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hero-headline {
+            font-size: clamp(30px, 11vw, 42px);
+          }
+
+          .hero-subtext {
+            font-size: 15px;
+          }
+
+          .result-card {
+            padding: 12px 14px;
           }
         }
       `}</style>

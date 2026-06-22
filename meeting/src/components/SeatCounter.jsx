@@ -40,6 +40,7 @@ export default function SeatCounter() {
         .seat-counter-wrap {
           display: flex;
           align-items: center;
+          flex-wrap: wrap;
           gap: 10px;
           margin: 20px 0 0 0;
           margin-bottom: 50px;
@@ -61,6 +62,7 @@ export default function SeatCounter() {
           letter-spacing: -0.01em;
           display: flex;
           align-items: center;
+          flex-wrap: wrap;
           gap: 6px;
         }
 
@@ -93,6 +95,7 @@ export default function SeatCounter() {
         .seat-bar-wrap {
           display: flex;
           align-items: center;
+          flex-wrap: wrap;
           gap: 8px;
           margin-top: 6px;
         }
@@ -118,6 +121,36 @@ export default function SeatCounter() {
           font-weight: 600;
           color: #aaa;
           white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+          .seat-counter-wrap {
+            margin-bottom: 28px;
+          }
+
+          .seat-text,
+          .seat-label {
+            font-size: 14px;
+          }
+
+          .seat-bar-bg {
+            width: min(100%, 220px);
+          }
+        }
+
+        @media (max-width: 480px) {
+          .seat-counter-wrap,
+          .seat-bar-wrap {
+            align-items: flex-start;
+          }
+
+          .seat-text {
+            line-height: 1.45;
+          }
+
+          .seat-bar-label {
+            white-space: normal;
+          }
         }
 
         @keyframes seat-pulse {

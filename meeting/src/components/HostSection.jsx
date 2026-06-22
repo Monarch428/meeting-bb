@@ -129,6 +129,10 @@ export default function HostSection() {
         }
 
         @media (max-width: 768px) {
+          .host-wrapper {
+            padding: 64px 16px;
+          }
+
           .host-container {
             flex-direction: column;
             gap: 32px;
@@ -141,11 +145,20 @@ export default function HostSection() {
 
           .host-role {
             font-size: 16px;
+            justify-content: center;
+          }
+
+          .host-content {
+            text-align: center;
           }
 
           .host-bio,
           .host-promise p {
             font-size: 16px;
+          }
+
+          .host-promise {
+            text-align: left;
           }
         }
       `}</style>

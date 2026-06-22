@@ -142,6 +142,7 @@ export default function ShiftSection() {
           border-bottom: 1px solid #f0ebe3;
           display: flex;
           align-items: center;
+          flex-wrap: wrap;
           gap: 8px;
           background: #fafaf9;
         }
@@ -244,16 +245,61 @@ export default function ShiftSection() {
   opacity: 0.93;
 }
 
-/* ── Responsive ── */
-@media (max-width: 768px) {
-  .hero-container { ... }
-  .hero-right { ... }
-  .info-bar { ... }
+        @media (max-width: 900px) {
+          .compare-card {
+            flex-direction: column;
+          }
 
-  .hero-cta-banner {
-    max-width: 100%;   /* full width on mobile */
-  }
-}
+          .compare-divider {
+            width: 100%;
+            height: 1px;
+          }
+
+          .compare-badge {
+            top: 0;
+            left: 50%;
+          }
+
+          .panel {
+            padding: 28px 24px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .shift-wrapper {
+            padding: 64px 16px;
+          }
+
+          .shift-container {
+            gap: 32px;
+          }
+
+          .panel {
+            padding: 22px 18px;
+          }
+
+          .panel-label,
+          .panel-desc,
+          .ai-query,
+          .ai-response-label,
+          .ai-result-name {
+            font-size: 15px;
+          }
+
+          .ai-result-sub,
+          .old-list-item {
+            font-size: 13px;
+          }
+
+          .hero-cta-banner {
+            max-width: 100%;
+            margin-bottom: 0;
+          }
+
+          .section-divider {
+            margin-top: 40px;
+          }
+        }
 
       `}</style>
 
@@ -346,13 +392,6 @@ export default function ShiftSection() {
 
         </div>
 
-        <br/>
-        <br/>
-        <br/>         
-        <br/>
-        <br/>
-  
-    
          <hr className="section-divider" />
       </section>
     </>

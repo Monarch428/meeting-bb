@@ -127,7 +127,7 @@ export default function RegisterSection() {
           box-sizing: border-box;
         }
         .register-container {
-          width: 40%;
+          width: min(100%, 720px);
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -243,6 +243,16 @@ export default function RegisterSection() {
           .register-card { padding: 24px 16px; gap: 20px; }
           .register-row { flex-direction: column; gap: 20px; }
           .register-btn { font-size: 14px; padding: 14px 20px; }
+        }
+
+        @media (max-width: 480px) {
+          .register-wrapper {
+            padding: 52px 14px;
+          }
+
+          .register-field label {
+            font-size: 16px;
+          }
         }
       `}</style>
 
