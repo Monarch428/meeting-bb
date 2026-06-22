@@ -10,8 +10,8 @@ export default function RegisterSection() {
     phone: "",
   });
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading]     = useState(false);
-  const [error, setError]         = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -60,47 +60,104 @@ export default function RegisterSection() {
           }
         `}</style>
         <section className="register-wrapper" id="register">
-          <div style={{
-            textAlign: "center", display: "flex", flexDirection: "column",
-            alignItems: "center", gap: "20px", maxWidth: 480
-          }}>
-            <div style={{
-              width: 72, height: 72, borderRadius: "50%",
-              background: "#e8f5e9", display: "flex",
-              alignItems: "center", justifyContent: "center"
-            }}>
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
-                stroke="#2e7d32" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="20 6 9 17 4 12"/>
+          <div
+            style={{
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "20px",
+              maxWidth: 480,
+            }}
+          >
+            <div
+              style={{
+                width: 72,
+                height: 72,
+                borderRadius: "50%",
+                background: "#e8f5e9",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#2e7d32"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12" />
               </svg>
             </div>
-            <h2 style={{
-              fontSize: "clamp(26px, 4vw, 44px)", fontWeight: 800,
-              color: "#1a1a1a", margin: 0, letterSpacing: "-0.02em"
-            }}>
+            <h2
+              style={{
+                fontSize: "clamp(26px, 4vw, 44px)",
+                fontWeight: 800,
+                color: "#1a1a1a",
+                margin: 0,
+                letterSpacing: "-0.02em",
+              }}
+            >
               You're registered!
             </h2>
-            <p style={{ fontSize: 18, color: "#5a5555", margin: 0, lineHeight: 1.6 }}>
-              We've sent the Zoom link to{" "}
-              <strong style={{ color: "#1a1a1a" }}>{form.email}</strong>.
-              Check your inbox (and spam just in case).
+            <p
+              style={{
+                fontSize: 18,
+                color: "#5a5555",
+                margin: 0,
+                lineHeight: 1.6,
+              }}
+            >
+              <strong style={{ color: "#1a1a1a" }}>You’re registered!</strong>
+              <br />
+              We’ll send all the event details to your inbox shortly. Please
+              check both your inbox and spam folder to make sure you don’t miss
+              it.
             </p>
-            <div style={{
-              background: "#fff", border: "1px solid #e2dbd2",
-              borderRadius: 12, padding: "20px 28px", width: "100%",
-              display: "flex", flexDirection: "column", gap: 10
-            }}>
+            <div
+              style={{
+                background: "#fff",
+                border: "1px solid #e2dbd2",
+                borderRadius: 12,
+                padding: "20px 28px",
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                gap: 10,
+              }}
+            >
               {[
-                { label: "Date",  value: "Wed, July 15, 2026" },
-                { label: "Time",  value: "10:30 AM EST" },
+                { label: "Date", value: "Wed, July 15, 2026" },
+                { label: "Time", value: "10:30 AM EST" },
                 { label: "Where", value: "Online · Zoom" },
-                { label: "Cost",  value: "100% Free" },
+                { label: "Cost", value: "100% Free" },
               ].map(({ label, value }) => (
-                <div key={label} style={{ display: "flex", justifyContent: "space-between", fontSize: 15 }}>
-                  <span style={{ color: "#e03030", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                <div
+                  key={label}
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    fontSize: 15,
+                  }}
+                >
+                  <span
+                    style={{
+                      color: "#e03030",
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.06em",
+                    }}
+                  >
                     {label}
                   </span>
-                  <span style={{ fontWeight: 600, color: "#1a1a1a" }}>{value}</span>
+                  <span style={{ fontWeight: 600, color: "#1a1a1a" }}>
+                    {value}
+                  </span>
                 </div>
               ))}
             </div>
@@ -258,7 +315,6 @@ export default function RegisterSection() {
 
       <section className="register-wrapper" id="register">
         <div className="register-container">
-
           <div style={{ textAlign: "center" }}>
             <p className="register-eyebrow">Limited Seats</p>
             <h2 className="register-headline">Register Free for July 15th</h2>
@@ -268,36 +324,63 @@ export default function RegisterSection() {
             <div className="register-row">
               <div className="register-field">
                 <label htmlFor="fullName">Full Name</label>
-                <input id="fullName" name="fullName" type="text"
-                  value={form.fullName} onChange={handleChange} placeholder="Full Name" />
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  value={form.fullName}
+                  onChange={handleChange}
+                  placeholder="Full Name"
+                />
               </div>
               <div className="register-field">
                 <label htmlFor="email">Email Address</label>
-                <input id="email" name="email" type="email"
-                  value={form.email} onChange={handleChange} placeholder="Email Address" />
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Email Address"
+                />
               </div>
             </div>
 
             <div className="register-row">
               <div className="register-field">
                 <label htmlFor="company">Company Name</label>
-                <input id="company" name="company" type="text"
-                  value={form.company} onChange={handleChange} placeholder="Company Name" />
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  value={form.company}
+                  onChange={handleChange}
+                  placeholder="Company Name"
+                />
               </div>
               <div className="register-field">
                 <label htmlFor="phone">Phone</label>
-                <input id="phone" name="phone" type="tel"
-                  value={form.phone} onChange={handleChange} placeholder="Phone" />
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="Phone"
+                />
               </div>
             </div>
 
             {error && <p className="register-error">{error}</p>}
 
-            <button className="register-btn" onClick={handleSubmit} disabled={loading}>
+            <button
+              className="register-btn"
+              onClick={handleSubmit}
+              disabled={loading}
+            >
               {loading ? "Registering..." : "Register Free for July 15th"}
             </button>
           </div>
-
         </div>
       </section>
     </>
