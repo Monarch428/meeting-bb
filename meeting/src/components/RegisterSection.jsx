@@ -262,7 +262,6 @@ export default function RegisterSection() {
           <div style={{ textAlign: "center" }}>
             <p className="register-eyebrow">Limited Seats</p>
             <h2 className="register-headline">Register Free for July 15th</h2>
-            <p className="register-sub">You'll get the Zoom link by email right after you register.</p>
           </div>
 
           <div className="register-card">

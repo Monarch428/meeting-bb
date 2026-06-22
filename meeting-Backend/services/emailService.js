@@ -51,45 +51,64 @@ const sendZoomLink = async (registrant) => {
     to: registrant.email,
     subject: "You're registered! Here's your Zoom link for July 15th",
     html: `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #1a1a1a;">Hi ${registrant.fullName}, you're in! ✅</h2>
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.6;">
+  
+  <h2 style="color: #1a1a1a;">
+    Hi ${registrant.fullName},
+  </h2>
 
-        <p>Thanks for registering for the <strong>AI for HVAC Owners</strong> session.</p>
+  <p>
+    Thank you for registering for our upcoming event.
+  </p>
 
-        <div style="background: #f9f9f9; border-radius: 8px; padding: 20px; margin: 24px 0;">
-          <h3 style="margin: 0 0 16px 0; color: #1a1a1a;">Session Details</h3>
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr>
-              <td style="padding: 6px 0; color: #e03030; font-weight: 700; width: 100px;">DATE</td>
-              <td style="padding: 6px 0; font-weight: 600;">Wednesday, July 15, 2026</td>
-            </tr>
-            <tr>
-              <td style="padding: 6px 0; color: #e03030; font-weight: 700;">TIME</td>
-              <td style="padding: 6px 0; font-weight: 600;">10:30 AM EST</td>
-            </tr>
-            <tr>
-              <td style="padding: 6px 0; color: #e03030; font-weight: 700;">WHERE</td>
-              <td style="padding: 6px 0; font-weight: 600;">Online · Zoom</td>
-            </tr>
-            <tr>
-              <td style="padding: 6px 0; color: #e03030; font-weight: 700;">COST</td>
-              <td style="padding: 6px 0; font-weight: 600;">100% Free</td>
-            </tr>
-          </table>
-        </div>
+  <p>
+    Your registration has been confirmed successfully.
+  </p>
 
-        <a href="${process.env.ZOOM_LINK}"
-          style="display: inline-block; background: #e03030; color: #fff;
-                 padding: 14px 28px; border-radius: 6px; text-decoration: none;
-                 font-weight: 700; font-size: 16px; margin: 8px 0;">
-          Join Zoom Meeting
-        </a>
+  <p>
+    We'll be sending the Zoom link and event access details to this email address closer to the event date.
+  </p>
 
-        <p style="margin-top: 24px;">No selling. No upsells. Just straight talk about what's changing.</p>
+  <div style="background: #f9f9f9; border-radius: 8px; padding: 20px; margin: 24px 0;">
+    <h3 style="margin: 0 0 16px 0; color: #1a1a1a;">
+      Event Details
+    </h3>
 
-        <br/>
-        <p>See you on July 15th!<br/><strong>HVAC AI Session Team</strong></p>
-      </div>
+    <p style="margin: 8px 0;">
+      📅 <strong>July 15th, 2026</strong>
+    </p>
+
+    <p style="margin: 8px 0;">
+      🕥 <strong>10:30 AM EST</strong>
+    </p>
+  </div>
+
+  <p>
+    Please add this event to your calendar to ensure you don't get double-booked.
+  </p>
+
+  <p>
+    Keep an eye on your inbox for further updates.
+  </p>
+
+  <p>
+    We look forward to seeing you there.
+  </p>
+
+  <br>
+
+  <p>
+    Cheers,<br><br>
+
+    <strong>Vignesh Velusamy</strong><br>
+    Founder | BrandingBeez<br>
+    +91 99524 62833<br>
+    <a href="https://www.brandingbeez.co.uk" style="color: #e03030; text-decoration: none;">
+      www.brandingbeez.co.uk
+    </a>
+  </p>
+
+</div>
     `,
   });
   console.log("✅ Zoom link sent to:", registrant.email);
